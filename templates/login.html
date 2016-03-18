@@ -1,0 +1,13 @@
+{% extends "templates/base.html"%}
+
+{% block title%} Login {% endblock %}
+{% block nav_login %}LOGIN{%endblock%}
+
+{% block content%}
+    <h2>Login</h2>
+        <form action="/login" method = "post"> <!-- action corresponds to the handler you want to run. -->
+            <label>Username: <input type="text" name = "username" id= "username"></label>
+            <label> Password: <input type="password" name = "pw" id="pw"></label>
+            <input type="submit" value = "Login">
+        </form>
+{%endblock%}

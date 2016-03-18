@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- Custom stylesheet -->
+    <link rel= "stylesheet" href="static/styles.css">
+    
+    <title>Alissa Chan | {% block title %}Page title here {%endblock%} </title>
+</head>
+
+<body>
+    <header>
+        <div class="jumbotron">
+            <h1>Alissa Chan</h1>
+            <nav class="nav nav-pills">
+                <a href="home"> {% block nav_home %}Home{% endblock %}</a> | 
+                <a href="aboutme">{% block nav_about %}About Me{% endblock %}</a> | 
+                <a href="blog"> {% block nav_blog %}Blog{% endblock %}</a> | 
+                <a href="login"> {% block nav_login %}Login{% endblock %}</a>
+            </nav>
+        </div>
+    </header>
+    
+    {% block content%}
+    This is body content from base.html. I shouldn't see any of this.
+    {% endblock %}
+
+    <footer>
+        <p>Copyright &copy; 2016 by Alissa Chan <br>
+            <a href="https://desx2.wordpress.com/">Desirable Design Blog</a> 
+        </p> 
+    </footer>
+
+</body>
+</html>
