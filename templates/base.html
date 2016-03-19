@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Noticia+Text:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
     <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
@@ -11,6 +13,7 @@
 
     <!-- Custom stylesheet -->
     <link rel= "stylesheet" href="static/styles.css">
+
     
     <title>Alissa Chan | {% block title %}Page title here {%endblock%} </title>
 </head>
@@ -20,18 +23,27 @@
         <div class="jumbotron">
             <h1>Alissa Chan</h1>
             <nav class="nav nav-pills">
-                <a href="home"> {% block nav_home %}Home{% endblock %}</a> | 
-                <a href="aboutme">{% block nav_about %}About Me{% endblock %}</a> | 
-                <a href="blog"> {% block nav_blog %}Blog{% endblock %}</a> | 
+                <a href="home"> {% block nav_home %}Home{% endblock %}</a>
+                <a href="aboutme">{% block nav_about %}About Me{% endblock %}</a>
+                <a href="blog"> {% block nav_blog %}Blog{% endblock %}</a>
                 <a href="login"> {% block nav_login %}Login{% endblock %}</a>
             </nav>
+            <script type="text/javascript">
+                $(".nav a").on("click", function(){
+               $(".nav").find(".active").removeClass("active");
+               $(this).parent().addClass("active");
+            });
+            </script>
         </div>
     </header>
     
+    <div class = "subbody">
     {% block content%}
+  
     This is body content from base.html. I shouldn't see any of this.
+    
     {% endblock %}
-
+    </div>
     <footer>
         <p>Copyright &copy; 2016 by Alissa Chan <br>
             <a href="https://desx2.wordpress.com/">Desirable Design Blog</a> 
