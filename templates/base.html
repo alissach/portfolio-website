@@ -21,19 +21,30 @@
 <body>
     <header>
         <div class="jumbotron">
-            <h1>Alissa Chan</h1>
             <nav class="nav nav-pills">
-                <a href="home"> {% block nav_home %}Home{% endblock %}</a>
-                <a href="aboutme">{% block nav_about %}About Me{% endblock %}</a>
-                <a href="blog"> {% block nav_blog %}Blog{% endblock %}</a>
-                <a href="login"> {% block nav_login %}Login{% endblock %}</a>
+                <a href="home" id="home"> {% block nav_home %}Home{% endblock %}</a>
+                <a href="aboutme" id="aboutme">{% block nav_about %}About Me{% endblock %}</a>
+                <a href="blog" id="blog">{% block nav_blog %}Blog{% endblock %}</a>
+                <a href="login" id="login"> {% block nav_login %}Login{% endblock %}</a>
             </nav>
-            <script type="text/javascript">
-                $(".nav a").on("click", function(){
-               $(".nav").find(".active").removeClass("active");
-               $(this).parent().addClass("active");
-            });
+            <script>
+                var activepageurl = location.pathname.slice(1); // get active page url
+                console.log("Current page: " + activepageurl);
+                if (activepageurl == "home") {
+                    document.getElementById("home").setAttribute("class", "active");
+                }
+                else if (activepageurl == "aboutme") {
+                    document.getElementById("aboutme").setAttribute("class", "active");
+                }
+                else if (activepageurl == "blog") {
+                    document.getElementById("blog").setAttribute("class", "active"); 
+                }
+                else if (activepageurl == "login") {
+                    document.getElementById("login").setAttribute("class", "active");
+                }
             </script>
+            <h1>Alissa Chan</h1>
+
         </div>
     </header>
     

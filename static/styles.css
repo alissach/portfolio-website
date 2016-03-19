@@ -5,7 +5,7 @@
 /*SHORTCUTS - click on static folder and CTRL+N then save it */
 
 body{
-    font-family: Lato, Candara, Arial;
+    font-family: Lato, Candara, Helvetica;
 }
 
 .subbody {
@@ -17,30 +17,37 @@ a {
     font-size: 17px;
     text-decoration: none;
     color: white;
-    padding: 10px;
+    padding: 5px 10px 5px 10px;
 }
 
-a:hover {
+nav a:hover {
     color: black;
     background-color: white;
     text-decoration: none;
+    border-radius: 2px;
+}
+
+nav a.active{
+    color: black;
+    background-color: white;
+    border-radius: 2px;
 }
 
 nav {
     /*text-align: center;*/
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     background-color: rgba(0,0,0,0.6);
     text-align: center;
+    position: bottom;
 }
 
 .jumbotron {
-    margin: 0 !important;
+    margin: 0;
     background: url("bkg_img.png") center top 15%;
     width: 100%;
-    height: 100%;
     background-size: cover;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .jumbotron h1 {
@@ -51,4 +58,10 @@ nav {
 
 footer {
     padding: 2%;
+    background-color: black;
+    color: white;
+}
+
+footer a:hover{
+    color: #CCFFFF;
 }
