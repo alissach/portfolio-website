@@ -13,6 +13,10 @@
 
     <!-- Custom stylesheet -->
     <link rel= "stylesheet" href="static/styles.css">
+    
+    <!-- For media queries -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
     
     <title>Alissa Chan | {% block title %}Page title here {%endblock%} </title>
@@ -21,28 +25,12 @@
 <body>
     <header>
         <div class="jumbotron">
-            <nav class="nav nav-pills">
+            <nav class="nav nav-pills nav-stacked">
                 <a href="home" id="home"> {% block nav_home %}Home{% endblock %}</a>
                 <a href="aboutme" id="aboutme">{% block nav_about %}About Me{% endblock %}</a>
                 <a href="blog" id="blog">{% block nav_blog %}Blog{% endblock %}</a>
                 <a href="login" id="login"> {% block nav_login %}Login{% endblock %}</a>
-            </nav>
-            <script>
-                var activepageurl = location.pathname.slice(1); // get active page url
-                console.log("Current page: " + activepageurl);
-                if (activepageurl == "home") {
-                    document.getElementById("home").setAttribute("class", "active");
-                }
-                else if (activepageurl == "aboutme") {
-                    document.getElementById("aboutme").setAttribute("class", "active");
-                }
-                else if (activepageurl == "blog") {
-                    document.getElementById("blog").setAttribute("class", "active"); 
-                }
-                else if (activepageurl == "login") {
-                    document.getElementById("login").setAttribute("class", "active");
-                }
-            </script>
+            </nav> 
             <h1>Alissa Chan</h1>
 
         </div>
@@ -57,9 +45,12 @@
     </div>
     <footer>
         <p>Copyright &copy; 2016 by Alissa Chan <br>
-            <a href="https://desx2.wordpress.com/">Desirable Design Blog</a> 
+            <a href="https://desx2.wordpress.com/" class="btn btn-link">Desirable Design Blog</a>
+            <a href="#" class="btn btn-info"> <span class="glyphicon glyphicon-circle-arrow-up"></span> </a> <!-- Back to top button -->
         </p> 
     </footer>
 
+
+<script type="text/javascript" src="static/script.js"></script> 
 </body>
 </html>

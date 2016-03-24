@@ -4,13 +4,9 @@
 
 /*SHORTCUTS - click on static folder and CTRL+N then save it */
 
-body{
-    font-family: Lato, Candara, Helvetica;
-}
+body{ font-family: Lato, Candara, Helvetica; }
 
-.subbody {
-    padding: 2%;
-}
+.subbody { padding: 2%; }
 
 a {
     font-family: "Noticia Text";
@@ -37,23 +33,30 @@ nav {
     /*text-align: center;*/
     padding-top: 15px;
     padding-bottom: 15px;
-    background-color: rgba(0,0,0,0.6);
+    background-color: #000; /*rgba(0,0,0,0.6);*/
     text-align: center;
-    position: bottom;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1; /*Keep on top at all times*/
 }
 
 .jumbotron {
     margin: 0;
     background: url("bkg_img.png") center top 15%;
     width: 100%;
+    height: 30vh;
     background-size: cover;
-    /*overflow: hidden;*/
+    position: relative;
 }
 
+/* "Alissa Chan" text */
 .jumbotron h1 {
     text-align: center;
+    padding-top: 30px;
     color: #FFFFFF;
     font-family: "Noticia Text";
+    min-width: 10vw;
 }
 
 footer {
@@ -64,4 +67,24 @@ footer {
 
 footer a:hover{
     color: #CCFFFF;
+}
+
+img {
+    /*margin: %;*/
+}
+
+/*Back to top button*/
+.btn btn-info {
+    /*float: right;*/
+    position: fixed;
+    
+}
+
+@media screen and (min-width:600px) {
+    .nav-collapse {
+        width: 300px; /*CHECK THIS*/
+    }
+    img {
+        margin: 0%;
+    }
 }
