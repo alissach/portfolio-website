@@ -4,9 +4,14 @@
 
 /*SHORTCUTS - click on static folder and CTRL+N then save it */
 
-body{ font-family: Lato, Candara, Helvetica; }
+body{ 
+    padding-bottom: 80px;
+    font-family: Lato, Candara, Helvetica; 
+}
 
-.subbody { padding: 2%; }
+.subbody { 
+    padding: 2%; 
+}
 
 a {
     font-family: "Noticia Text";
@@ -15,6 +20,7 @@ a {
     color: white;
     padding: 5px 10px 5px 10px;
 }
+
 
 nav a:hover {
     color: black;
@@ -29,17 +35,16 @@ nav a.active{
     border-radius: 2px;
 }
 
-nav {
-    /*text-align: center;*/
-    padding-top: 15px;
-    padding-bottom: 15px;
-    background-color: #000; /*rgba(0,0,0,0.6);*/
+nav{
+    padding: 0;
+    background-color: #white;
+    color: black;
     text-align: center;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 1; /*Keep on top at all times*/
-}
+} 
 
 .jumbotron {
     margin: 0;
@@ -62,6 +67,7 @@ nav {
 footer {
     padding: 2%;
     background-color: black;
+    opacity: .6;
     color: white;
 }
 
@@ -70,21 +76,52 @@ footer a:hover{
 }
 
 img {
-    /*margin: %;*/
+    /*padding: 1%;*/
 }
 
 /*Back to top button*/
-.btn btn-info {
-    /*float: right;*/
+.glyphicon glyphicon-circle-arrow-up {
+    float: right;
     position: fixed;
     
 }
 
-@media screen and (min-width:600px) {
-    .nav-collapse {
-        width: 300px; /*CHECK THIS*/
+.navbar navbar-fixed-bottom {  
+
+}
+
+/* MOBILE-FIRST MEDIA QUERIES */
+/* Breakpoints obtained from https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints */
+
+/* Desktops and laptops */
+@media screen and (min-width:1000px) {
+    
+    .jumbotron img{
+        max-height: 35vh;
     }
-    img {
-        margin: 0%;
+
+    body {
+        background: beige;
+    }
+
+    .carousel slide {
+        max-width: 100%;
+        position: center;
+    }
+}
+
+/* Tablets/Small laptops */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1000px){
+    body { 
+        background: #D2F3FF; /*light blue*/
+    }
+    nav {
+        background: cyan;
+    }
+}
+/* Smartphones */
+@media only screen and (max-device-width: 768px) {
+    body{
+        background: yellow;
     }
 }
