@@ -13,7 +13,7 @@ body{
     padding: 2%; 
 }
 
-a {
+nav a {
     font-family: "Noticia Text";
     font-size: 17px;
     text-decoration: none;
@@ -35,16 +35,22 @@ nav a.active{
     border-radius: 2px;
 }
 
-nav{
-    padding: 0;
-    background-color: #white;
-    color: black;
+/* Non-collapsed view*/
+header nav{
     text-align: center;
+    background-color: black;
+    color: black;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 1; /*Keep on top at all times*/
 } 
+
+.icon-bar{
+    color: white;
+    background-color: white;
+    position: left;
+}
 
 .jumbotron {
     margin: 0;
@@ -67,7 +73,7 @@ nav{
 footer {
     padding: 2%;
     background-color: black;
-    opacity: .6;
+    /*opacity: .6;*/
     color: white;
 }
 
@@ -80,14 +86,21 @@ img {
 }
 
 /*Back to top button*/
-.glyphicon glyphicon-circle-arrow-up {
-    float: right;
+.btn.btn-info{
     position: fixed;
-    
+    right:0;
+    bottom: 100px;
+    background-color:blue;
 }
 
-.navbar navbar-fixed-bottom {  
+.social-media i {  
+    float:right;
+    color:white;
+    padding: 0 5px 0 5px;
+}
 
+.social-media i:hover {
+    color: cyan;
 }
 
 /* MOBILE-FIRST MEDIA QUERIES */
