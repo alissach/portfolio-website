@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <link href='https://fonts.googleapis.com/css?family=Noticia+Text:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
-
+    
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+    
+    <!-- Bootstrap JQuery link -->
     <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
     
     <!-- Latest compiled and minified JavaScript -->
@@ -26,25 +28,23 @@
 <body>
     <header>
         <div class="jumbotron">
-            <nav class="nav navbar-pill navbar-fixed-top"> 
-              <div class="container-fluid">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navcollapse" aria-expanded="true">
-                    <!-- Hamburger menu -->
-                    <span class="sr-only">Toggle navigation</span> <!-- Accessibility -->
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+            <nav class="nav navbar-pill navbar-fixed-top">
+                <div class="container-fluid">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navcollapse" aria-expanded="true">
+                        <!-- Next line is for accessibility -->
+                        <span class="sr-only">Toggle navigation</span> 
+                        <span class="glyphicon glyphicon-menu-hamburger"></span>
+                    </button> 
 
-                <div class="navbar-collapse collapse" id="navcollapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="home" id="home"> {% block nav_home %}Home{% endblock %}</a></li>
-                        <li><a href="aboutme" id="aboutme">{% block nav_about %}About Me{% endblock %}</a></li>
-                        <li><a href="blog" id="blog">{% block nav_blog %}Blog{% endblock %}</a></li>
-                        <li><a href="login" id="login"> {% block nav_login %}Login{% endblock %}</a></li>
-                    </ul>
+                    <div class="navbar-collapse collapse" id="navcollapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="home" id="home"> Home </a></li>
+                            <li><a href="aboutme" id="aboutme">About Me</a></li>
+                            <li><a href="blog" id="blog">Blog</a></li>
+                            <li><a href="login" id="login"> Login</a></li>
+                        </ul>
+                    </div>
                 </div>
-              </div>
             </nav>
         <h1>Alissa Chan</h1>
 
@@ -58,21 +58,26 @@
     
     {% endblock %}
     </div>
-    <footer class="navbar navbar-fixed-bottom">
-        <p>Copyright &copy; 2016 by Alissa Chan</p>
-        <p><a href="http://www.desx2.wordpress.com">Desirable Design Blog</a></p>
-            <!-- Back to top button -->
-            
-            <a href="#" class="btn btn-info"> <span class="glyphicon glyphicon-circle-arrow-up"></span></a>
-            
-            <div class="social-media">
+    <footer> <!--<class="navbar navbar-fixed-bottom"> -->
+        <!-- <div class = "row"> -->
+            <!-- <div class = "column-sm-4"> -->
+            <p>Copyright &copy; 2016 by Alissa Chan</p>
+    <!--         <p><a href="http://www.desx2.wordpress.com">Desirable Design Blog</a></p> -->            
+                <!-- Back to top button -->
+                <a href="#" class="btn btn-default btn-info"> <span class="glyphicon glyphicon-menu-up"></span></a>
+                
+                <div class="social-media">
                 <a href="http://www.facebook.com"> <i class="fa fa-2x fa-facebook-official"></i></a>
-            <a href="http://www.instagram.com/ahchan18"> <i class="fa fa-2x fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/alissachan"> <i class="fa fa-2x fa-linkedin-square"></i></a>
+                <a href="http://www.instagram.com/ahchan18"> <i class="fa fa-2x fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/alissachan"> <i class="fa fa-2x fa-linkedin-square"></i></a>
+                <a href="http://www.desx2.wordpress.com"><img src="static/dd_logo.png" alt="Desirable design blog" id="ddblog"></a>
+                </div>
             </div>
+        </div>
     </footer>
 
-<!-- Link to javascript file -->
+<!-- Link to Bootstrap javascript file -->
 <script src="js/bootstrap.min.js"></script>
+<!-- Link to custom javascript file -->
 <script src="static/script.js"></script>
 </html>

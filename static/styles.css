@@ -1,26 +1,21 @@
-/* 4 ways to apply styles:
-    1) Default
-    2) If in tag it has the highest precedence. If in Head section using style tag, will apply to whole page. So use external style sheet.*/
-
-/*SHORTCUTS - click on static folder and CTRL+N then save it */
+/* Mobile-first!! */
 
 body{ 
-    padding-bottom: 80px;
+    padding-bottom: 5vh;
     font-family: Lato, Candara, Helvetica; 
+    background-color: pink;
 }
 
-.subbody { 
-    padding: 2%; 
+.subbody {
+    padding: 3%;
 }
-
-nav a {
+header nav a {
     font-family: "Noticia Text";
     font-size: 17px;
     text-decoration: none;
     color: white;
     padding: 5px 10px 5px 10px;
 }
-
 
 nav a:hover {
     color: black;
@@ -33,23 +28,22 @@ nav a.active{
     color: black;
     background-color: white;
     border-radius: 2px;
+    font-weight: bold;
 }
 
-/* Non-collapsed view*/
 header nav{
-    text-align: center;
+    text-align: center !important;
     background-color: black;
     color: black;
     width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 1; /*Keep on top at all times*/
+    /*top: 0;*/
+    z-index: 50; /*Keep on top at all times*/
 } 
 
-.icon-bar{
+.glyphicon.glyphicon-menu-hamburger{
     color: white;
-    background-color: white;
-    position: left;
+    font-size: 20px;    
+    text-align: left;
 }
 
 .jumbotron {
@@ -71,43 +65,53 @@ header nav{
 }
 
 footer {
-    padding: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    /*position: absolute;*/
+    bottom: 0;
     background-color: black;
-    /*opacity: .6;*/
     color: white;
-}
-
-footer a:hover{
-    color: #CCFFFF;
-}
-
-img {
-    /*padding: 1%;*/
 }
 
 /*Back to top button*/
 .btn.btn-info{
     position: fixed;
     right:0;
-    bottom: 100px;
-    background-color:blue;
+    bottom: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 4px 0;
+    font-size: 18px;
+    border-radius: 15px;
 }
 
 .social-media i {  
-    float:right;
+    /*float:right;*/
     color:white;
     padding: 0 5px 0 5px;
 }
 
-.social-media i:hover {
-    color: cyan;
+#ddblog {
+    max-height: 25px;
 }
 
-/* MOBILE-FIRST MEDIA QUERIES */
+/********* MEDIA QUERIES *********/
 /* Breakpoints obtained from https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints */
 
+/* Tablets & Small laptops */
+@media only screen and (min-width: 768px){
+    body { 
+        background: #D2F3FF; /*light blue*/
+        text-align: center;
+    }
+    nav {
+        background: orange;
+    }
+}
+
 /* Desktops and laptops */
-@media screen and (min-width:1000px) {
+@media screen and (min-width:1024px) {
     
     .jumbotron img{
         max-height: 35vh;
@@ -117,24 +121,41 @@ img {
         background: beige;
     }
 
-    .carousel slide {
+    /*.carousel.slide {
         max-width: 100%;
         position: center;
-    }
+    }*/
+    .subbody{
+        max-width:75%;
+        padding: 2%; 
+        margin: 0 auto;
 }
+    }
+    .img-responsive {
+        max-height: 50vh;
+        height: auto;
+        overflow: hidden;
+    }
+    
+    .social-media i {  
+        float:right;
+        color:white;
+        padding: 0 5px 0 5px;
+    }
 
-/* Tablets/Small laptops */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1000px){
-    body { 
-        background: #D2F3FF; /*light blue*/
+    .social-media i:hover {
+        color: cyan;
     }
-    nav {
-        background: cyan;
+
+    #ddblog {
+        max-height: 25px;
     }
-}
-/* Smartphones */
-@media only screen and (max-device-width: 768px) {
-    body{
-        background: yellow;
+
+    #ddblog:hover{
+        background-color: #CCFFFF;
+    }
+
+    footer a:hover{
+        color: #CCFFFF;
     }
 }
