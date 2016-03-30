@@ -1,9 +1,26 @@
 /* Mobile-first!! */
 
-body{ 
-    padding-bottom: 5vh;
+/*****Sticky footer*****/
+* {
+    margin: 0;
+}
+
+.wrapper{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -5em;
+}
+
+footer, .push {
+    height: 5em;
+}
+/***** End sticky footer *****/
+
+html, body{ 
     font-family: Lato, Candara, Helvetica; 
     background-color: pink;
+    height:100%;
 }
 
 .subbody {
@@ -96,6 +113,7 @@ footer {
     max-height: 25px;
 }
 
+
 /********* MEDIA QUERIES *********/
 /* Breakpoints obtained from https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints */
 
@@ -112,7 +130,6 @@ footer {
 
 /* Desktops and laptops */
 @media screen and (min-width:1024px) {
-    
     .jumbotron img{
         max-height: 35vh;
     }
@@ -121,16 +138,12 @@ footer {
         background: beige;
     }
 
-    /*.carousel.slide {
-        max-width: 100%;
-        position: center;
-    }*/
     .subbody{
         max-width:75%;
         padding: 2%; 
         margin: 0 auto;
-}
     }
+    
     .img-responsive {
         max-height: 50vh;
         height: auto;
