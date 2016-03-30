@@ -50,6 +50,8 @@ class LoginHandler(webapp2.RequestHandler):
         self.response.write(template.render({'username': username, 'pw': pw}))
         if username != "Colleen" and pw != "pass":
             logging.info("Invalid credentials used; Username: " + username + " password: " + pw) #print in log the username and password only when invalid credentials were used.
+
+
 app = webapp2.WSGIApplication([
     ('/home', AllHandlers),
     ('/aboutme', AllHandlers),

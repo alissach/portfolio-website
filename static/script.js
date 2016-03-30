@@ -1,4 +1,4 @@
-
+// Mark the active page on the navbar
 function activepage() {
     var activepageurl = location.pathname.slice(1); // get active page url
     console.log("Current page: " + activepageurl);
@@ -15,6 +15,8 @@ function activepage() {
         document.getElementById("login").className="active";
     }
 }
+
+
 
 // Calling functions
 activepage()

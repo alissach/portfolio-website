@@ -93,8 +93,8 @@ footer {
 /*Back to top button*/
 .btn.btn-info{
     position: fixed;
-    right:0;
-    bottom: 30px;
+    right: 10px;
+    bottom: 10px;
     width: 30px;
     height: 30px;
     text-align: center;
@@ -104,9 +104,8 @@ footer {
 }
 
 .social-media i {  
-    /*float:right;*/
     color:white;
-    padding: 0 5px 0 5px;
+    padding: 0 5px 0px 5px;
 }
 
 #ddblog {
@@ -123,41 +122,33 @@ footer {
         background: #D2F3FF; /*light blue*/
         text-align: center;
     }
-    nav {
-        background: orange;
-    }
 }
 
 /* Desktops and laptops */
 @media screen and (min-width:1024px) {
-    .jumbotron img{
+    .jumbotron img{ 
         max-height: 35vh;
     }
 
-    body {
-        background: beige;
+    body { 
+        background: beige; 
     }
 
     .subbody{
         max-width:75%;
         padding: 2%; 
         margin: 0 auto;
+        text-align: left;
     }
-    
+
     .img-responsive {
         max-height: 50vh;
         height: auto;
         overflow: hidden;
     }
     
-    .social-media i {  
-        float:right;
-        color:white;
-        padding: 0 5px 0 5px;
-    }
-
-    .social-media i:hover {
-        color: cyan;
+    .social-media i:hover { 
+        color: cyan; 
     }
 
     #ddblog {

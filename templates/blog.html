@@ -1,60 +1,79 @@
 {% extends "templates/base.html" %}
-
 {% block title%} Blog {% endblock %}
-{% block nav_blog %}BLOG{%endblock%}
 
 {% block content%}
     <h2>Blog</h2>
-    <p>Here is one blog post I wrote on my wordpress link (see footer). Obviously this'll be hellishly ugly right now, bu tI encourage you to click the link in the footer if you want to see a beautiful WordPress version. </p>
-    <br>If you haven’t heard of Tab for a Cause, I encourage you to go download it right now. Tab for a Cause (TFAC) is “a [free] extension that replaces your new tab page with a beautiful page that raises money for charity as you surf the web.” It’s similar to Google’s enormously successful but short-lived Chrome for a Cause way back in 2010, but TFAC is the permanent version, and is made by an independent team of developers. The extension is amazing and is the only one to offer this opportunity of donating to charities by web browsing, but as always there’s still a couple features that could be added or improved.
+    <!-- LIGHTBOX TUTORIAL http://michaelsoriano.com/create-a-responsive-photo-gallery-with-bootstrap-framework/ -->
+    <div class="container">
+        <ul class="row">
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="static/twc1.png" alt="Screenshot of Marriot advertisement in The Weather Channel Mobile App"></li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="static/twc2.png" alt="Screenshot of Starbucks coffee advertisement in The Weather Channel Mobile App"></li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="static/twc3.png" alt="Screenshot of Hilton advertisement in The Weather Channel Mobile App"></li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="static/twc4.png" alt="Screenshot of Kentucky Fried Chicken advertisement in The Weather Channel Mobile App"></li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="static/twc5.png" alt="Screenshot of Walmart advertisement in The Weather Channel Mobile App"></li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="static/twc6.png" alt="Screenshot of Detroit background in The Weather Channel Mobile App"></li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="static/twc7.png" alt="Screenshot of Quaker Oatmeal advertisement in The Weather Channel Mobile App"></li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="static/twc8.png" alt="Screenshot of Starbucks breakfast sandwich advertisement in The Weather Channel Mobile App"></li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="static/twc9.png" alt="Screenshot of Maui Jim sunglasses advertisement in The Weather Channel Mobile App"></li>
+        </ul>
+    </div>
 
-    First, a more in-depth introduction to what Tab for a Cause is:
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
-    Tab for a Cause is paid by advertisers to show their ads on the new tab page. At least half of the profits are given to the partner charities. The TFAC “currency” is hearts; each tab you open counts as 1 heart, or you can refer a friend for 350 hearts. You then donate your hearts to a charity of your choice, as seen in the third screenshot below, and each tab contributes “between 1/10 and 1/3 of a cent.”
+    <p>Here's an example of one of my blog posts on my site, <a href="http://www.desx2.wordpress.com">Desirable Design</a>.</p>
+    <p>
+        <span style="font-weight: 400;">I have rarely seen an advertisement for something and thought, “wow, this ad is gorgeous," particularly for mobile ads. So when I decided I needed a different mobile weather app, I turned to The Weather Channel. </span>
 
-    What I love about TFAC is that they are transparent with how their extension works and post exactly how they spend the money.
-    
-    Some improvements I’d like to see in TFAC include:
-<ul>
-    <li>Donating tabs automatically. Currently, tabs must be donated manually - and as easy as it is to do so, automatic tab donations would still make a big difference. It would be ideal if we could set our tab donation preferences based on the percentage of tabs we want to donate to each organization. This could also eliminate the small learning curve in realizing that you have to manually donate the tabs, and it would eliminate the use of users' un-donated hearts. There's no real reason to "save up" on hearts.</li>
-    <li>Add a TFAC extension icon next to Chrome’s other extensions. It’d be nice if you could click on this currently nonexistent extension icon to see how many hearts you haven’t donated yet, and maybe it could be a great way to donate immediately without going to the new tab page.</li>
-    <li>Automatically count tabs you open without using the new tab page. This is somewhat unrealistic since TFAC money comes from how many views an ad gets on the new tab page. I don’t really see a viable workaround to this, but perhaps they could add the advertisements in the pop-up box when you click the TFAC icon (refer to bullet point 2 above).</li>
-</ul>
-<br>Overall, Tab for a Cause isn’t perfect in terms of design, but it still works brilliantly and so far dominates the Chrome Webstore as the only extension that lets you make good use of your web browsing without going out of the way to donate. It’s so simple and useful, and I keep wondering why this isn’t as popular as it should be. So if you’re feeling charitable, and you want to save the world with no more effort than a few clicks, start using Tab for a Cause!
+        I was expecting a typical weather app - a simple interface that tells me the temperature and conditions and has hourly and future forecasts. The old Weather Channel app didn't have any ads even though it was the free version (according to the <a href="http://forums.androidcentral.com/google-nexus-7-tablet-2012/253946-weather-apps.html" target="_blank">Android forum</a> that posted the photo in 2013), so I was expecting something similar to that (see below). But after a major UI overhaul, the current version of the app is absolutely breathtaking, <em>and</em> it has advertisements. The biggest accomplishment is that these ads don't look like traditional ads.
 
-<h2>Blog</h2>
-    <p>Here is one blog post I wrote on my wordpress link (see footer). Obviously this'll be hellishly ugly right now, bu tI encourage you to click the link in the footer if you want to see a beautiful WordPress version. </p>
-    <br>If you haven’t heard of Tab for a Cause, I encourage you to go download it right now. Tab for a Cause (TFAC) is “a [free] extension that replaces your new tab page with a beautiful page that raises money for charity as you surf the web.” It’s similar to Google’s enormously successful but short-lived Chrome for a Cause way back in 2010, but TFAC is the permanent version, and is made by an independent team of developers. The extension is amazing and is the only one to offer this opportunity of donating to charities by web browsing, but as always there’s still a couple features that could be added or improved.
+        <p>The front page of the new Weather Channel App consists of clean, large numbers representing the current temperature and conditions in a circle - exactly the first piece of information I want to see when opening a weather app. Behind that is a breathtaking scene that changes depending on your location, weather, and the current time, and at the footer of that is the advertisement. The first time I opened the app, it took me some time to recognize that the image overlay at the bottom of that screen was actually an advertisement.</p>
 
-    First, a more in-depth introduction to what Tab for a Cause is:
+        <p>Great job to The Weather Channel for making ads actually look nice. I’d even go so far as to say those beautifully integrated ads <em>improve</em> the app’s viewing experience when seamlessly combined with the background image. Without the ads, I might say it's just a beautiful image. But with them, I actually pay equal attention to both the weather info itself and the un-intrusive ad at the bottom. I wish more mobile apps tried to do this or at the very least made their banner ads less horrendous. <span style="font-weight: 400;">Most of the ones I see on Android are flashy banners with blinking neon text that demand you click on it to protect your phone from viruses and spyware, and it's incredibly refreshing to see a sponsored link that enhances both the app and the advertisement.</span></p>
 
-    Tab for a Cause is paid by advertisers to show their ads on the new tab page. At least half of the profits are given to the partner charities. The TFAC “currency” is hearts; each tab you open counts as 1 heart, or you can refer a friend for 350 hearts. You then donate your hearts to a charity of your choice, as seen in the third screenshot below, and each tab contributes “between 1/10 and 1/3 of a cent.”
+        <p>I just have to hope that one day, this trend of beautiful ads in mobile apps will actually catch on, to the benefit of both the sellers and the consumers.</p>
 
-    What I love about TFAC is that they are transparent with how their extension works and post exactly how they spend the money.
-    
-    Some improvements I’d like to see in TFAC include:
-<ul>
-    <li>Donating tabs automatically. Currently, tabs must be donated manually - and as easy as it is to do so, automatic tab donations would still make a big difference. It would be ideal if we could set our tab donation preferences based on the percentage of tabs we want to donate to each organization. This could also eliminate the small learning curve in realizing that you have to manually donate the tabs, and it would eliminate the use of users' un-donated hearts. There's no real reason to "save up" on hearts.</li>
-    <li>Add a TFAC extension icon next to Chrome’s other extensions. It’d be nice if you could click on this currently nonexistent extension icon to see how many hearts you haven’t donated yet, and maybe it could be a great way to donate immediately without going to the new tab page.</li>
-    <li>Automatically count tabs you open without using the new tab page. This is somewhat unrealistic since TFAC money comes from how many views an ad gets on the new tab page. I don’t really see a viable workaround to this, but perhaps they could add the advertisements in the pop-up box when you click the TFAC icon (refer to bullet point 2 above).</li>
-</ul>
-<br>Overall, Tab for a Cause isn’t perfect in terms of design, but it still works brilliantly and so far dominates the Chrome Webstore as the only extension that lets you make good use of your web browsing without going out of the way to donate. It’s so simple and useful, and I keep wondering why this isn’t as popular as it should be. So if you’re feeling charitable, and you want to save the world with no more effort than a few clicks, start using Tab for a Cause!
-<h2>Blog</h2>
-    <p>Here is one blog post I wrote on my wordpress link (see footer). Obviously this'll be hellishly ugly right now, bu tI encourage you to click the link in the footer if you want to see a beautiful WordPress version. </p>
-    <br>If you haven’t heard of Tab for a Cause, I encourage you to go download it right now. Tab for a Cause (TFAC) is “a [free] extension that replaces your new tab page with a beautiful page that raises money for charity as you surf the web.” It’s similar to Google’s enormously successful but short-lived Chrome for a Cause way back in 2010, but TFAC is the permanent version, and is made by an independent team of developers. The extension is amazing and is the only one to offer this opportunity of donating to charities by web browsing, but as always there’s still a couple features that could be added or improved.
+    </p>
 
-    First, a more in-depth introduction to what Tab for a Cause is:
+<style type="text/css">
+    ul {
+      padding:0 0 0 0;
+      margin:0 0 0 0;
+    }
+    ul li {
+      list-style:none;
+      margin-bottom:25px;
+    }
+    ul li img {
+      cursor: pointer;
+    }
+    img {
+        max-height: 200px;
+    }
 
-    Tab for a Cause is paid by advertisers to show their ads on the new tab page. At least half of the profits are given to the partner charities. The TFAC “currency” is hearts; each tab you open counts as 1 heart, or you can refer a friend for 350 hearts. You then donate your hearts to a charity of your choice, as seen in the third screenshot below, and each tab contributes “between 1/10 and 1/3 of a cent.”
+</style>
 
-    What I love about TFAC is that they are transparent with how their extension works and post exactly how they spend the money.
-    
-    Some improvements I’d like to see in TFAC include:
-<ul>
-    <li>Donating tabs automatically. Currently, tabs must be donated manually - and as easy as it is to do so, automatic tab donations would still make a big difference. It would be ideal if we could set our tab donation preferences based on the percentage of tabs we want to donate to each organization. This could also eliminate the small learning curve in realizing that you have to manually donate the tabs, and it would eliminate the use of users' un-donated hearts. There's no real reason to "save up" on hearts.</li>
-    <li>Add a TFAC extension icon next to Chrome’s other extensions. It’d be nice if you could click on this currently nonexistent extension icon to see how many hearts you haven’t donated yet, and maybe it could be a great way to donate immediately without going to the new tab page.</li>
-    <li>Automatically count tabs you open without using the new tab page. This is somewhat unrealistic since TFAC money comes from how many views an ad gets on the new tab page. I don’t really see a viable workaround to this, but perhaps they could add the advertisements in the pop-up box when you click the TFAC icon (refer to bullet point 2 above).</li>
-</ul>
-<br>Overall, Tab for a Cause isn’t perfect in terms of design, but it still works brilliantly and so far dominates the Chrome Webstore as the only extension that lets you make good use of your web browsing without going out of the way to donate. It’s so simple and useful, and I keep wondering why this isn’t as popular as it should be. So if you’re feeling charitable, and you want to save the world with no more effort than a few clicks, start using Tab for a Cause!
+<!-- Lightbox -->
+<script type="text/javascript">
+    $(document).ready(function(){
+       $('li img').on('click',function(){
+            var src = $(this).attr('src');
+            var img = '<img src="' + src + '" class="img-responsive"/>';
+            $('#myModal').modal();
+            $('#myModal').on('shown.bs.modal', function(){
+                $('#myModal .modal-body').html(img);
+            });
+            $('#myModal').on('hidden.bs.modal', function(){
+                $('#myModal .modal-body').html('');
+            });
+       });
+    })
+</script>
 {% endblock %}
 
