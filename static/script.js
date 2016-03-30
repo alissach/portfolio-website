@@ -17,6 +17,8 @@ function activepage() {
 }
 
 
+// Fixed to top navbar
 
-// Calling functions
+
+// Calling all functions
 activepage()

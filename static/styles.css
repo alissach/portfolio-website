@@ -122,12 +122,26 @@ footer {
         background: #D2F3FF; /*light blue*/
         text-align: center;
     }
+    .subbody{
+        max-width:75%;
+        padding: 2%; 
+        margin: 0 auto;
+        text-align: left;
+    }
+    /*Hide blog page carousel on tablets/small laptops*/
+    .carousel.slide {
+        display:none;
+    }
 }
 
 /* Desktops and laptops */
 @media screen and (min-width:1024px) {
     .jumbotron img{ 
         max-height: 35vh;
+    }
+
+    #navcollapse>li {
+        text-align: center;
     }
 
     body { 
@@ -161,5 +175,10 @@ footer {
 
     footer a:hover{
         color: #CCFFFF;
+    }
+
+    /*Hide blog page carousel on desktop*/
+    .carousel.slide {
+        display:none;
     }
 }
