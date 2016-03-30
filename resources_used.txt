@@ -6,8 +6,8 @@ Resources Used
 - Sticky footer: http://ryanfait.com/resources/footer-stick-to-bottom-of-page/
 - Lots of help from w3schools.com/bootstrap and tutorials from there.
 - Carousel/slider help https://www.youtube.com/watch?v=R0nkkXkrby0
-
-Lightbox? http://michaelsoriano.com/create-a-responsive-photo-gallery-with-bootstrap-framework/ 
+- Lightbox reference: http://www.bootply.com/71401# 
 
 Other notes:
 - Accessibility: I've labeled images with alt attribute for screenreaders.
+

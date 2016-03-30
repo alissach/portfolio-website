@@ -17,8 +17,14 @@ function activepage() {
 }
 
 
-// Fixed to top navbar
-
+// Lightbox (blog page)
+$('.thumbnail').click(function(){
+    $('.modal-body').empty("hello");
+    var title = $(this).parent('a').attr("title");
+    $('.modal-title').html(title);
+    $($(this).parents('div').html()).appendTo('.modal-body');
+    $('.modal.fade').modal({show:true});
+});
 
 // Calling all functions
 activepage()

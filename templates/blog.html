@@ -3,21 +3,8 @@
 
 {% block content%}
     <h2>Blog</h2>
-    <!-- LIGHTBOX TUTORIAL -->
-    <div class="container">
-        <ul class="row">
-           <!--  <li><img src="static/twc1.png" alt="Screenshot of Marriot ad in The Weather Channel Mobile App"></li>
-            <li><img src="static/twc2.png" alt="Screenshot of Starbucks coffee ad in The Weather Channel Mobile App"></li>
-            <li><img src="static/twc3.png" alt="Screenshot of Hilton ad in The Weather Channel Mobile App"></li>
-            <li><img src="static/twc4.png" alt="Screenshot of Kentucky Fried Chicken ad in The Weather Channel Mobile App"></li>
-            <li><img src="static/twc5.png" alt="Screenshot of Walmart ad in The Weather Channel Mobile App"></li>
-            <li><img src="static/twc6.png" alt="Screenshot of Detroit background in The Weather Channel Mobile App"></li>
-            <li><img src="static/twc7.png" alt="Screenshot of Quaker Oatmeal ad in The Weather Channel Mobile App"></li>
-            <li><img src="static/twc8.png" alt="Screenshot of Starbucks breakfast sandwich ad in The Weather Channel Mobile App"></li>
-            <li><img src="static/twc9.png" alt="Screenshot of Maui Jim sunglasses ad in The Weather Channel Mobile App"></li> -->
-        </ul>
-    </div>
-    <!-- Carousel (nine images) -->
+
+<!-- CAROUSEL GALLERY(nine images) for mobile view -->
 <div id="twcCarousel" class = "carousel slide">
     <ol class="carousel-indicators">
         <li data-target="#twcCarousel" data-slide-to="0" class="active"></li>
@@ -29,51 +16,54 @@
         <li data-target="#twcCarousel" data-slide-to="6"></li>
         <li data-target="#twcCarousel" data-slide-to="7"></li>
         <li data-target="#twcCarousel" data-slide-to="8"></li>
-    </ol>
-    
-    <!-- Images -->
+    </ol> 
+    <!-- Carousel Images -->
     <div class="carousel-inner">
-        <div class="item active">
-            <img src="static/twc1.png" alt="Screenshot of Marriot ad in The Weather Channel Mobile App" class = "img-responsive">
-        </div>
-        <div class="item">
-            <img src="static/twc2.png" alt="Screenshot of Starbucks coffee ad in The Weather Channel Mobile App" class = "img-responsive">
-        </div>
-        <div class="item">
-            <img src="static/twc3.png" alt="Screenshot of Hilton ad in The Weather Channel Mobile App" class = "img-responsive">
-        </div>
-        <div class="item">
-            <img src="static/twc4.png" alt="Screenshot of Kentucky Fried Chicken ad in The Weather Channel Mobile App" class = "img-responsive">
-        </div>
-
-        <div class="item">
-            <img src="static/twc5.png" alt="Screenshot of Walmart ad in The Weather Channel Mobile App" class="img-responsive">
-        </div>
-        <div class="item">
-            <img src="static/twc6.png" alt="Screenshot of Detroit background in The Weather Channel Mobile App" class="img-responsive">
-        </div>
-        <div class="item">
-            <img src="static/twc7.png" alt="Screenshot of Quaker Oatmeal ad in The Weather Channel Mobile App" class="img-responsive">
-        </div>
-        <div class="item">
-            <img src="static/twc8.png" alt="Screenshot of Starbucks breakfast sandwich ad in The Weather Channel Mobile App" class="img-responsive">
-        </div>
-        <div class="item">
-            <img src="static/twc9.png" alt="Screenshot of Maui Jim sunglasses ad in The Weather Channel Mobile App" class="img-responsive">
-        </div>
-
-    <!-- Left and right slider arrows indicators -->
+        <div class="item active"><img src="static/twc1.png" alt="Marriot ad in The Weather Channel Mobile App" class = "img-responsive"></div>
+        <div class="item"><img src="static/twc2.png" alt="Starbucks coffee ad in The Weather Channel Mobile App" class = "img-responsive"></div>
+        <div class="item"><img src="static/twc3.png" alt="Hilton ad in The Weather Channel Mobile App" class = "img-responsive"></div>
+        <div class="item"><img src="static/twc4.png" alt="Kentucky Fried Chicken ad in The Weather Channel Mobile App" class = "img-responsive"></div>
+        <div class="item"><img src="static/twc5.png" alt="Walmart ad in The Weather Channel Mobile App" class="img-responsive"></div>
+        <div class="item"><img src="static/twc6.png" alt="Detroit background in The Weather Channel Mobile App" class="img-responsive"></div>
+        <div class="item"><img src="static/twc7.png" alt="Quaker Oatmeal ad in The Weather Channel Mobile App" class="img-responsive"></div>
+        <div class="item"><img src="static/twc8.png" alt="Starbucks breakfast sandwich ad in The Weather Channel Mobile App" class="img-responsive"></div>
+        <div class="item"><img src="static/twc9.png" alt="Maui Jim sunglasses ad in The Weather Channel Mobile App" class="img-responsive"></div>
     </div>
-    <a class="carousel-control left" href="#twcCarousel" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-    <a class="carousel-control right" href="#twcCarousel" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
+    <!-- Left and right slider arrows indicators -->
+    <a class="carousel-control left" href="#twcCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="carousel-control right" href="#twcCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 </div>
 
+<!-- LIGHTBOX GALLERY FOR DESKTOP/TABLET-->
+    <div id = "twcLightbox" class="container">
+        <div class="row">
+            <div class="col-lg-4"><a href="#" title="Marriot ad in The Weather Channel Mobile App"><img class="thumbnail img-responsive" src="static/twc1.png"></a></div>
+            <div class="col-lg-4"><a href="#" title="Starbucks coffee ad in The Weather Channel Mobile App"><img class="thumbnail img-responsive" src="static/twc2.png"></a></div>
+            <div class="col-lg-4"><a href="#" title="Hilton ad in The Weather Channel Mobile App"><img class="thumbnail img-responsive" src="static/twc3.png"></a></div>
+            <div class="col-lg-4"><a href="#" title="Kentucky Fried Chicken ad in The Weather Channel Mobile App"><img class="thumbnail img-responsive" src="static/twc4.png"></a></div>
+            <div class="col-lg-4"><a href="#" title="Walmart ad in The Weather Channel Mobile App"><img class="thumbnail img-responsive" src="static/twc5.png"></a></div>
+            <div class="col-lg-4"><a href="#" title="Detroit background in The Weather Channel Mobile App"><img class="thumbnail img-responsive" src="static/twc6.png"></a></div>
+            <div class="col-lg-4"><a href="#" title="Quaker Oatmeal ad in The Weather Channel Mobile App"><img class="thumbnail img-responsive" src="static/twc7.png"></a></div>
+            <div class="col-lg-4"><a href="#" title="Starbucks breakfast sandwich ad in The Weather Channel Mobile App"><img class="thumbnail img-responsive" src="static/twc8.png"></a></div>
+            <div class="col-lg-4"><a href="#" title="Maui Jim sunglasses ad in The Weather Channel Mobile App"><img class="thumbnail img-responsive" src="static/twc9.png"></a></div>
+        </div>
+    
+        <div id="twcModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h3 class="modal-title">Heading</h3>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer"><button class="btn btn-default" data-dismiss="modal">Close</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start blog paragraph content -->
     <p>Here's an example of one of my blog posts on my site, <a href="http://www.desx2.wordpress.com">Desirable Design</a>.</p>
-    <p>
         <span style="font-weight: 400;">I have rarely seen an ad for something and thought, “wow, this ad is gorgeous," particularly for mobile ads. So when I decided I needed a different mobile weather app, I turned to The Weather Channel. </span>
 
         I was expecting a typical weather app - a simple interface that tells me the temperature and conditions and has hourly and future forecasts. The old Weather Channel app didn't have any ads even though it was the free version (according to the <a href="http://forums.androidcentral.com/google-nexus-7-tablet-2012/253946-weather-apps.html" target="_blank">Android forum</a> that posted the photo in 2013), so I was expecting something similar to that (see below). But after a major UI overhaul, the current version of the app is absolutely breathtaking, <em>and</em> it has ads. The biggest accomplishment is that these ads don't look like traditional ads.
@@ -84,6 +74,5 @@
 
         <p>I just have to hope that one day, this trend of beautiful ads in mobile apps will actually catch on, to the benefit of both the sellers and the consumers.</p>
 
-    </p>
 {% endblock %}
 
