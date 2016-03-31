@@ -90,7 +90,6 @@ footer {
     color: white;
 }
 
-
 .social-media i {  
     color:white;
     padding: 0 5px 0px 5px;
@@ -117,21 +116,24 @@ footer {
     border-radius: 15px;
 }
 
+/*Show slide by default on mobile; hide lightbox*/
+.carousel.slide {
+        max-width: 354px;
+        margin: 0 auto;
+    }
+    #twcLightbox{
+        /*display:none;*/
+    }
+
 /********* MEDIA QUERIES *********/
 /* Breakpoints obtained from https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints */
-
-@media only screen and (max-width:353px){ 
-    /*Hide lightbox on mobile*/
-    #twcLightbox {
-        display:none;
-    }
-}
 
 /*Large phones*/ 
 /*Set at 354px to fix blog carousel width issue*/
 @media only screen and (min-width:354px){ 
     .carousel.slide {
         max-width: 354px;
+        margin: 0 auto;
     }
     #twcLightbox{
         display:none;
@@ -152,22 +154,16 @@ footer {
         text-align: left;
     }
     .carousel.slide {
-        display:none;
-    }
-    #twcLightbox{
         display:visible;
+        margin: 0 auto;
     }
 }
 
 /* Desktops and laptops */
 @media screen and (min-width:1024px) {
     .jumbotron img{ 
-        max-height: 35vh;
+        max-height: 40vh;
     }
-
-    /*#navcollapse>li {
-        text-align: center;
-    }*/
 
     body { 
         background: beige; 
@@ -187,15 +183,12 @@ footer {
     }
     
     .social-media i:hover { 
-        color: cyan; 
+        color: #15C2C2; 
     }
 
     #ddblog:hover{
-        background-color: #CCFFFF;
-    }
-
-    footer a:hover{
-        color: #CCFFFF;
+        background-color: #15C2C2;
+        border-radius: 2px;
     }
 
     /*Hide blog page carousel on desktop*/
@@ -203,6 +196,10 @@ footer {
         display:none;
     }
     
+    #twcLightbox {
+        visibility: visible;
+    }
+
     /*Lightbox styling on desktop*/
     /*.modal-dialog {
         width:60%;

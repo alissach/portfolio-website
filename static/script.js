@@ -26,5 +26,6 @@ $('.thumbnail').click(function(){
     $('.modal.fade').modal({show:true});
 });
 
+
 // Calling all functions
 activepage()
