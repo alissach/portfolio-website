@@ -3,7 +3,9 @@
 html, body {
     height: 100%;
     font-family: "Open Sans", sans-serif; 
+    line-height: 150%;
     background-color: pink;
+
 }
 
 .subbody {
@@ -15,21 +17,19 @@ header nav a {
     font-size: 17px;
     text-decoration: none;
     color: white;
-    /*padding: 10px !important;*/
     z-index: 1000;
-    /*margin: 10px;*/
     border-radius: 0px !important;
 }
 
 nav a:hover {
     color: black;
-    background-color: white;
-    text-decoration: none;
+    background-color: #C6D5F5 !important;
+    /*text-decoration: none;*/
 }
 
 nav a.active{
     color: black;
-    background-color: white;
+    background-color: #DFE9FF;
     border-radius: 2px;
     font-weight: bold;
     z-index: 100;
