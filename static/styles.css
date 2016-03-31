@@ -17,21 +17,23 @@ footer, .push {
 }
 /***** End sticky footer *****/
 
-html, body{ 
+html, body {
+    height: 100%;
     font-family: Lato, Candara, Helvetica; 
     background-color: pink;
-    height:100%;
 }
 
 .subbody {
     padding: 3%;
 }
+
 header nav a {
     font-family: "Noticia Text";
     font-size: 17px;
     text-decoration: none;
     color: white;
     padding: 5px 10px 5px 10px;
+    z-index: 1000;
 }
 
 nav a:hover {
@@ -46,6 +48,7 @@ nav a.active{
     background-color: white;
     border-radius: 2px;
     font-weight: bold;
+    z-index: 100;
 }
 
 header nav{
@@ -54,7 +57,8 @@ header nav{
     color: black;
     width: 100%;
     /*top: 0;*/
-    z-index: 50; /*Keep on top at all times*/
+    z-index: 99; /*Keep on top at all times*/
+
 } 
 
 .glyphicon.glyphicon-menu-hamburger{
@@ -73,10 +77,10 @@ header nav{
 }
 
 /* "Alissa Chan" text */
-.jumbotron h1 {
+h1 {
     text-align: center;
     padding-top: 30px;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     font-family: "Noticia Text";
     min-width: 10vw;
 }

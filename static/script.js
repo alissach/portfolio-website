@@ -27,5 +27,15 @@ $('.thumbnail').click(function(){
 });
 
 
-// Calling all functions
+// Inject jumbotron class into navigation if page is NOT homepage
+function show_jumbotron(){
+    var activepageurl = location.pathname.slice(1); // get active page url
+    if (activepageurl != "home") {
+        document.getElementById("navigation").className = "jumbotron";
+        document.getElementsByTagName("h1")[0].className= "";
+    }
+}
+
+// Calling functions
 activepage()
+show_jumbotron()

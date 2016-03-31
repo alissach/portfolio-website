@@ -7,6 +7,7 @@ Resources Used
 - Lots of help from w3schools.com/bootstrap and tutorials from there.
 - Carousel/slider help https://www.youtube.com/watch?v=R0nkkXkrby0
 - Lightbox reference: http://www.bootply.com/71401#
+- Homepage background image https://css-tricks.com/perfect-full-page-background-image/
  
 Other notes:
 - Accessibility: I've labeled images with alt attribute for screenreaders.

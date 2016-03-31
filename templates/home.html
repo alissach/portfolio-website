@@ -1,11 +1,10 @@
 {% extends "templates/base.html" %}
 
 {% block title%} Home {% endblock %} 
-{% block nav_home %}HOME{%endblock%}
 
 {% block content%}
              
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-sm-4">
                 <h2>Home</h2>
                 <p>Hiya, this is my homepage.</p>
@@ -24,6 +23,38 @@
                 <p><img class="img-responsive" src="static/suntunnels.png" alt = "suntunnels"/></p>
                 <p>The above image is called "Sun Tunnels." It's pretty great for a desktop background. </p>
             </div>
-        </div>
+        </div> -->
+        <!-- <img class="bkgimg" src="static/bkg_img.png"> -->
+
+<style scoped>
+    html, body{
+        background: url(static/bkg_img.png) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-attachment: fixed;
+        height:100%;
+    }
+
+    .jumbotron {
+        display:none;
+    }
+
+    nav {
+        visibility: visible !important;
+    }
+
+    h1{
+        text-align: center;
+        padding-top: 20%;
+        padding-left: 10%;
+        padding-right: 10%;
+        color: #FFFFFF;
+        font-family: "Noticia Text";
+        font-size: 65px;
+    }
+</style>
+
 {%endblock%}
 
