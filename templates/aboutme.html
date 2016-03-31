@@ -2,8 +2,14 @@
 {% block title%} About Me {% endblock %}
 
 {% block content %}
-    <h2>About Me</h2>
-	<p>Hi! My name is Alissa Chan. I'm a sophomore at the University of Michigan pursuing a Bachelor of Science in Information.<br><br>
-    Here is one of my favorite pictures ever:</p>
-    <img class="img-responsive" src="static/code_bugs.jpg" alt = "code-bugs" width=500>
+    <h2>About Me</h2><hr>
+    <div class="row">
+        <div class="col-xs-5 col-sm-4 col-md-4 col-lg-4">
+            <img id="profpic" class="img-responsive" src="static/alissa_pic.jpg" alt="Picture of Alissa Chan">
+        </div>
+        <div class="col-xs-7 col-sm-8 col-md-8 col-lg-8">
+            <p>Hi! My name is Alissa Chan. I'm a sophomore at the University of Michigan and will be pursuing a <a href="https://www.si.umich.edu/content/bsi">Bachelor of Science in Information</a> in the Fall.</p>
+        </div>
+    </div>
+
 {% endblock %}

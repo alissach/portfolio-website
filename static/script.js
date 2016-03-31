@@ -11,8 +11,8 @@ function activepage() {
     else if (activepageurl == "blog") {
         document.getElementById("blog").className="active"; 
     }
-    else if (activepageurl == "login") {
-        document.getElementById("login").className="active";
+    else if (activepageurl == "resume") {
+        document.getElementById("resume").className="active";
     }
 }
 
@@ -36,6 +36,8 @@ function show_jumbotron(){
     }
 }
 
+
 // Calling functions
 activepage()
+console.log("called activepage")
 show_jumbotron()

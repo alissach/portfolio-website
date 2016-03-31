@@ -3,58 +3,29 @@
 {% block title%} Home {% endblock %} 
 
 {% block content%}
-             
-        <!-- <div class="row">
-            <div class="col-sm-4">
-                <h2>Home</h2>
+<link rel="stylesheet" href="static/home_style.css">
+
+<!-- This has class = "subbody" -->
+        <h2>Projects</h2>
+        <div class="row">
+            <div class="col-sm-4 col-md-12 col-lg-4">
+                <h3>Khan Academy Case Study</h3>
+                <p>Here's a project I did for my Introduction to Information Studies class. Click the image to view the pdf! </p>
+                <a href="static/ka_case_study.pdf" target="_blank"><img class="img-responsive" src="static/ka-case-study.png" alt = "Khan Academy case study" ommouseover="imghover(this)"></a>
+            </div>
+            <div class="col-sm-4 col-md-0 col-lg-4">
+                <h3>Project 2</h3>
                 <p>Hiya, this is my homepage.</p>
-                <img class="img-responsive" src="static/dandelion.jpg" alt = "dandelion"/>
+                <img class="img-responsive" src="static/" alt = ""/>
                 <p>The above image is called "Sun Tunnels." It's pretty great for a desktop background. </p>
             </div>
             <div class="col-sm-4">
-                <h2>H2</h2>
-                <p>Hiya, this is my homepage.</p>
-                <img class="img-responsive" src="static/suntunnels.png" alt = "suntunnels"/>
-                <p>The above image is called "Sun Tunnels." It's pretty great for a desktop background. </p>
-            </div>
-            <div class="col-sm-4">
-                <h2>H3</h2>
+                <h3>Project 3</h3>
                 <p>Hiya, this is my homepage.</p>
                 <p><img class="img-responsive" src="static/suntunnels.png" alt = "suntunnels"/></p>
                 <p>The above image is called "Sun Tunnels." It's pretty great for a desktop background. </p>
             </div>
-        </div> -->
-        <!-- <img class="bkgimg" src="static/bkg_img.png"> -->
-
-<style scoped>
-    html, body{
-        background: url(static/bkg_img.png) no-repeat center center fixed; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        background-attachment: fixed;
-        height:100%;
-    }
-
-    .jumbotron {
-        display:none;
-    }
-
-    nav {
-        visibility: visible !important;
-    }
-
-    h1{
-        text-align: center;
-        padding-top: 20%;
-        padding-left: 10%;
-        padding-right: 10%;
-        color: #FFFFFF;
-        font-family: "Noticia Text";
-        font-size: 65px;
-    }
-</style>
-
+        </div> 
+    </div>   
 {%endblock%}
 

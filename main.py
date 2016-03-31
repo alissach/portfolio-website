@@ -33,29 +33,14 @@ class AllHandlers(webapp2.RequestHandler):
             self.response.write(template.render({})) #nothing to render in base.html, so I just left dictionary blank.
             logging.info("Using self.request.path for AllHandlers; here's the current path: " + self.request.path) #logging info to check what the path is of the current page; this is how I figured out you have to append .html in line 30.
         except:
-            template = JINJA_ENVIRONMENT.get_template('templates/home.html') #use default homepage if above fails
-            self.response.write(template.render({'title': 'Home'}))
-            logging.info("Failed to use current path: " + self.request.path +" Redirecting to home.html")
-
-class LoginHandler(webapp2.RequestHandler):
-    def get(self):
-        template = JINJA_ENVIRONMENT.get_template('templates/login.html')
-        self.response.write(template.render({'title': 'Login'})) #Set title of login page
-        logging.info("Form login page using GET") 
-
-    def post(self):
-        (username, pw) = (self.request.get('username'), self.request.get('pw')) #tuple assignment: setting variable username and pw to retrieve data associated with name "username" and "pw" from the form, respectively
-
-        template = JINJA_ENVIRONMENT.get_template('templates/postlogin.html') #retrieve postlogin.html as template
-        self.response.write(template.render({'username': username, 'pw': pw}))
-        if username != "Colleen" and pw != "pass":
-            logging.info("Invalid credentials used; Username: " + username + " password: " + pw) #print in log the username and password only when invalid credentials were used.
-
+            template = JINJA_ENVIRONMENT.get_template('templates/error.html') #Redirect to error page
+            self.response.write(template.render({'title': 'Error'}))
+            logging.info("Failed to use current path: " + self.request.path +" Redirecting to error.html")
 
 app = webapp2.WSGIApplication([
     ('/home', AllHandlers),
     ('/aboutme', AllHandlers),
     ('/blog', AllHandlers),
-    ('/login', LoginHandler),
+    ('/resume', AllHandlers),
     ('/.*', AllHandlers)
 ], debug=True)

@@ -1,0 +1,45 @@
+/*Stylesheet for homepage*/
+
+
+html, body{
+    background: url(bkg_img.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    height:100%;
+}
+
+.jumbotron {
+    display:none;
+}
+
+nav {
+    visibility: visible !important;
+}
+
+h1{
+    text-align: center;
+    padding-top: 60px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+    color: #FFFFFF;
+    font-family: "Noticia Text";
+    font-size: 65px;
+}
+
+h2{
+    font-size: 45px;
+}
+
+.subbody {
+    background-color: rgba(165,165,165, .5);
+    max-width: 80%;
+    color: white;
+    margin: 0 auto;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    margin-bottom: 3vh;
+}

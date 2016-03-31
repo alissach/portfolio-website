@@ -1,25 +1,8 @@
 /* Mobile-first!! */
 
-/*****Sticky footer*****/
-* {
-    margin: 0;
-}
-
-.wrapper{
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -5em;
-}
-
-footer, .push {
-    height: 5em;
-}
-/***** End sticky footer *****/
-
 html, body {
     height: 100%;
-    font-family: Lato, Candara, Helvetica; 
+    font-family: "Open Sans", sans-serif; 
     background-color: pink;
 }
 
@@ -28,19 +11,20 @@ html, body {
 }
 
 header nav a {
-    font-family: "Noticia Text";
+    font-family: "Open Sans Light";
     font-size: 17px;
     text-decoration: none;
     color: white;
-    padding: 5px 10px 5px 10px;
+    /*padding: 10px !important;*/
     z-index: 1000;
+    /*margin: 10px;*/
+    border-radius: 0px !important;
 }
 
 nav a:hover {
     color: black;
     background-color: white;
     text-decoration: none;
-    border-radius: 2px;
 }
 
 nav a.active{
@@ -126,8 +110,26 @@ footer {
         margin: 0 auto;
     }
     #twcLightbox{
-        /*display:none;*/
+        display:none;
     }
+
+/*****Sticky footer*****/
+* {
+    margin: 0;
+}
+
+.wrapper{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -5em;
+}
+
+footer, .push {
+    height: 5em;
+}
+/***** End sticky footer *****/
+
 
 /********* MEDIA QUERIES *********/
 /* Breakpoints obtained from https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints */
@@ -199,18 +201,20 @@ footer {
     .carousel.slide {
         display:none;
     }
-    
+    /*Show lightbox*/
     #twcLightbox {
-        visibility: visible;
+        display: inline;
     }
-
-    /*Lightbox styling on desktop*/
-    /*.modal-dialog {
-        width:60%;
-        height: auto;
-    }*/
 
     .thumbnail {
         margin-bottom:5px;
     }
+    
+    #profpic {
+        width:100%;
+    }
+
+/*    ul.nav.navbar-nav {
+        float:right;
+    }*/
 }
