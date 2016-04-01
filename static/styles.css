@@ -4,8 +4,7 @@ html, body {
     height: 100%;
     font-family: "Open Sans", sans-serif; 
     line-height: 150%;
-    background-color: pink;
-
+    background-color: #F2F2F2;
 }
 
 .subbody {
@@ -69,6 +68,13 @@ h1 {
     min-width: 10vw;
 }
 
+h2{
+    text-align: center;
+    font-size: 45px;
+    font-family: "Open Sans light";
+    color: #45A6FF; 
+}
+
 footer {
     padding-left: 2%;
     padding-right: 2%;
@@ -113,6 +119,14 @@ footer {
         display:none;
     }
 
+.projects, .project-img {
+    margin: 0 auto;
+}
+
+.projects.row h3 {
+    margin-left: 15px;
+}
+
 /*****Sticky footer*****/
 * {
     margin: 0;
@@ -132,7 +146,6 @@ footer, .push {
 
 
 /********* MEDIA QUERIES *********/
-/* Breakpoints obtained from https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints */
 
 /*Large phones*/ 
 /*Set at 354px to fix blog carousel width issue*/
@@ -144,6 +157,7 @@ footer, .push {
     #twcLightbox{
         display:none;
     }
+
 }
 
 

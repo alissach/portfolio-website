@@ -28,17 +28,18 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 
 class AllHandlers(webapp2.RequestHandler):
     def get(self):
-        try: #try block necessary to keep code running and to set homepage as the default if url fails (see except block)
+        try:
             template = JINJA_ENVIRONMENT.get_template('/templates' + self.request.path + ".html") #using string concatenation to retrieve urls using this one handler; to avoid showing .html in address bar I can use just the simple filepath, but must concatenate ".html" to make all the links work properly
-            self.response.write(template.render({})) #nothing to render in base.html, so I just left dictionary blank.
-            logging.info("Using self.request.path for AllHandlers; here's the current path: " + self.request.path) #logging info to check what the path is of the current page; this is how I figured out you have to append .html in line 30.
+            self.response.write(template.render({}))
+            logging.info("Using self.request.path for AllHandlers; here's the current path: " + self.request.path)
         except:
-            template = JINJA_ENVIRONMENT.get_template('templates/error.html') #Redirect to error page
-            self.response.write(template.render({'title': 'Error'}))
-            logging.info("Failed to use current path: " + self.request.path +" Redirecting to error.html")
+            template = JINJA_ENVIRONMENT.get_template('templates/index.html') #Redirect to error page
+            self.response.write(template.render({'title': 'Home'}))
+            logging.info("Failed to use current path: " + self.request.path +" Redirecting to index.html")
 
 app = webapp2.WSGIApplication([
-    ('/home', AllHandlers),
+    ('/', AllHandlers),
+    ('/index', AllHandlers),
     ('/aboutme', AllHandlers),
     ('/blog', AllHandlers),
     ('/resume', AllHandlers),

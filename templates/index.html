@@ -1,8 +1,12 @@
-{% extends 'templates/base.html' %}
-{% block title%} About Me {% endblock %}
+{% extends "templates/base.html" %}
 
-{% block content %}
-    <h2>About Me</h2><hr>
+{% block title%} Home {% endblock %} 
+
+{% block content%}
+<link rel="stylesheet" property="stylesheet" href="static/index_style.css">
+
+<!-- This has class = "subbody" -->
+    <h2>- About Me -</h2><hr>
     <div class="row">
         <div class="col-xs-5 col-sm-4 col-md-4 col-lg-4">
             <img id="profpic" class="img-responsive" src="static/alissa_pic.jpg" alt="Picture of Alissa Chan">
@@ -11,5 +15,7 @@
             <p>Hi! My name is Alissa Chan. I'm a sophomore at the University of Michigan and will be pursuing a <a href="https://www.si.umich.edu/content/bsi">Bachelor of Science in Information</a> in the Fall.</p>
         </div>
     </div>
+        
+  
+{%endblock%}
 
-{% endblock %}

@@ -15,10 +15,6 @@ html, body{
     display:none;
 }
 
-nav {
-    visibility: visible !important;
-}
-
 h1{
     text-align: center;
     padding-top: 60px;
@@ -35,11 +31,23 @@ h2{
 }
 
 .subbody {
-    background-color: rgba(165,165,165, .5);
+    background-color: rgba(0,0,0, .7);
     max-width: 80%;
     color: white;
     margin: 0 auto;
     padding-left: 2vw;
     padding-right: 2vw;
     margin-bottom: 3vh;
+}
+
+a{
+    color: #7AA2F9;
+}
+
+a:hover {
+    color: cyan;
+}
+
+.nav.navbar-pill.navbar-fixed-top{
+    display:block;
 }
