@@ -12,3 +12,8 @@ h4, h5{
     font-weight:bold;
     font-size: 15px;
 }
+
+.resumeinfo {
+    text-align: center;
+    color: #324E67;
+}
