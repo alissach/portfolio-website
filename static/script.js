@@ -1,18 +1,24 @@
 // Mark the active page on the navbar
 function activepage() {
-    var activepageurl = location.pathname.slice(1); // get active page url
+    var activepageurl = location.pathname; // get active page url
     console.log("Current page: " + activepageurl);
-    if (activepageurl == "index") {
+    if (activepageurl === "/index") {
         document.getElementById("index").className= "active";
     }
-    else if (activepageurl == "projects") {
+    else if (activepageurl === "/") {
+        document.getElementById("index").className="active";
+    }
+    else if (activepageurl === "/projects") {
         document.getElementById("projects").className="active";
     }
-    else if (activepageurl == "blog") {
+    else if (activepageurl === "/blog") {
         document.getElementById("blog").className="active"; 
     }
-    else if (activepageurl == "resume") {
+    else if (activepageurl === "/resume") {
         document.getElementById("resume").className="active";
+    }
+    else if (activepageurl === "/contact") {
+        document.getElementById("contact").className="active";
     }
 }
 

@@ -199,7 +199,7 @@ footer, .push {
     }
 
     .subbody{
-        max-width:75%;
+        max-width:60%;
         padding: 2%; 
         margin: 0 auto;
         text-align: left;
@@ -234,7 +234,8 @@ footer, .push {
     }
     
     #profpic {
-        width:100%;
+        max-width: 300px;
+        margin: 0 auto;
     }
 
 /*    ul.nav.navbar-nav {
