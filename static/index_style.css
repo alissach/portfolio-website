@@ -15,25 +15,22 @@ html, body{
     display:none;
 }
 
+
 h1{
     text-align: center;
     padding-top: 60px;
     padding-left: 10%;
     padding-right: 10%;
-    padding-bottom: 5%;
+    padding-bottom: 3%;
     color: #FFFFFF;
     font-family: "Noticia Text";
-    font-size: 65px;
-}
-
-h2{
-    font-size: 45px;
+    font-size: 50px;
 }
 
 .subbody {
     background-color: rgba(0,0,0, .7);
-    max-width: 80%;
-    color: white;
+    max-width: 90%;
+    color: #F2F2F2;
     margin: 0 auto;
     padding-left: 2vw;
     padding-right: 2vw;
@@ -50,4 +47,8 @@ a:hover {
 
 .nav.navbar-pill.navbar-fixed-top{
     display:block;
+}
+
+@media only screen and (max-width:425px){ 
+        
 }

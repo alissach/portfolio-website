@@ -1,5 +1,6 @@
 /* Mobile-first!! */
 
+
 html, body {
     height: 100%;
     font-family: "Open Sans", sans-serif; 
@@ -70,7 +71,7 @@ h1 {
 
 h2{
     text-align: center;
-    font-size: 45px;
+    font-size: 40px;
     font-family: "Open Sans light";
     color: #45A6FF; 
 }
@@ -100,14 +101,19 @@ footer {
 /*Back to top button*/
 .btn.btn-info{
     position: fixed;
-    right: 10px;
-    bottom: 10px;
-    width: 30px;
-    height: 30px;
+    right: 5px;
+    bottom: 5px;
+    width: 40px;
+    height: 40px;
     text-align: center;
     padding: 4px 0;
     font-size: 18px;
-    border-radius: 15px;
+    border-radius: 100px;
+}
+
+.glyphicon.glyphicon-menu-up {
+    font-size: 20px;
+    padding-top: 5px;
 }
 
 /*Show slide by default on mobile; hide lightbox*/
@@ -127,6 +133,8 @@ footer {
     margin-left: 15px;
 }
 
+
+
 /*****Sticky footer*****/
 * {
     margin: 0;
@@ -141,6 +149,7 @@ footer {
 
 footer, .push {
     height: 5em;
+    width: 100%;
 }
 /***** End sticky footer *****/
 

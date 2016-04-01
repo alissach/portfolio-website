@@ -37,11 +37,23 @@ class AllHandlers(webapp2.RequestHandler):
             self.response.write(template.render({'title': 'Home'}))
             logging.info("Failed to use current path: " + self.request.path +" Redirecting to index.html")
 
+class ContactHandler(webapp2.RequestHandler):
+    def get(self):
+        template = JINJA_ENVIRONMENT.get_template('templates/contact.html')
+        self.response.write(template.render({'title': 'Contact'})) #Set title of login page
+        logging.info("Contact form page using GET") 
+
+    def post(self):
+        (name, email, msg) = (self.request.get('name'), self.request.get('email'), self.request.get('msg')) #tuple assignment
+        template = JINJA_ENVIRONMENT.get_template('templates/postcontact.html') #retrieve postlogin.html as template
+        self.response.write(template.render({'name': name, 'email': email, 'msg': msg}))
+        
 app = webapp2.WSGIApplication([
     ('/', AllHandlers),
     ('/index', AllHandlers),
     ('/aboutme', AllHandlers),
     ('/blog', AllHandlers),
     ('/resume', AllHandlers),
+    ('/contact', ContactHandler),
     ('/.*', AllHandlers)
 ], debug=True)
