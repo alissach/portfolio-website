@@ -169,11 +169,9 @@ footer, .push {
 
 }
 
-
 /* Tablets & Small laptops */
 @media only screen and (min-width: 768px){
     body { 
-        background: #D2F3FF; /*light blue*/
         text-align: center;
     }
     .subbody{
@@ -192,10 +190,6 @@ footer, .push {
 @media screen and (min-width:1024px) {
     .jumbotron img{ 
         max-height: 40vh;
-    }
-
-    body { 
-        background: beige; 
     }
 
     .subbody{

@@ -20,6 +20,7 @@ import webapp2
 import os
 import logging
 import jinja2
+from google.appengine.api import mail
 
 JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
