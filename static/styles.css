@@ -24,7 +24,6 @@ header nav a {
 nav a:hover {
     color: black;
     background-color: #C6D5F5 !important;
-    /*text-decoration: none;*/
 }
 
 nav a.active{
@@ -40,7 +39,6 @@ header nav{
     background-color: black;
     color: black;
     width: 100%;
-    /*top: 0;*/
     z-index: 99; /*Keep on top at all times*/
 
 } 
@@ -79,7 +77,6 @@ h2{
 footer {
     padding-left: 2%;
     padding-right: 2%;
-    /*position: absolute;*/
     bottom: 0;
     background-color: black;
     color: white;
